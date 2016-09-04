@@ -56,6 +56,10 @@ Angular2+ Node Based Micro Service Architecture
     Manage Product Information 
     Manage Seller Information
 
+## Analytics (Rust Server)
+    User Behaviour patterns
+    Attacks prevention System
+    Securing from scraper
 
 
 
