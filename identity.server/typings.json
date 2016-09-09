@@ -1,0 +1,12 @@
+{
+  "name": "www.server",
+  "dependencies": {},
+  "globalDependencies": {
+    "bluebird": "registry:dt/bluebird#3.0.0+20160811111256",
+    "debug": "registry:dt/debug#0.0.0+20160317120654",
+    "koa": "registry:dt/koa#2.0.0+20160724024233",
+    "koa-router": "registry:dt/koa-router#7.0.0+20160812160355",
+    "mongoose": "registry:dt/mongoose#4.5.9+20160826204928",
+    "node-4": "registry:dt/node-4#4.0.0+20160801161248"
+  }
+}
