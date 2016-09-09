@@ -1,6 +1,8 @@
 {
   "name": "www.server",
-  "dependencies": {},
+  "dependencies": {
+    "jsonwebtoken": "registry:npm/jsonwebtoken#7.1.8+20160811031426"
+  },
   "globalDependencies": {
     "bluebird": "registry:dt/bluebird#3.0.0+20160811111256",
     "debug": "registry:dt/debug#0.0.0+20160317120654",
