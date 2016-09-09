@@ -1,0 +1,13 @@
+node_modules
+node_modules/*
+typings
+typings/*
+config/development.json
+config/test.json
+config/production.json
+_build
+_build/*
+temp
+temp/*
+.vscode
+.vscode/*
