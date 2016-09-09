@@ -1,0 +1,10 @@
+{
+  "name": "www.server",
+  "dependencies": {},
+  "globalDependencies": {
+    "debug": "registry:dt/debug#0.0.0+20160317120654",
+    "koa": "registry:dt/koa#2.0.0+20160724024233",
+    "koa-router": "registry:dt/koa-router#7.0.0+20160812160355",
+    "node-4": "registry:dt/node-4#4.0.0+20160801161248"
+  }
+}
