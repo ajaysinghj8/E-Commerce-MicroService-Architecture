@@ -28,7 +28,7 @@ if (Configuration.cluster) {
     }
 }
 else {
-    logger('Starting server in single thread mode with %s cpus ', cpus().length);
+    logger('Starting server in single thread mode');
     Application.listen(Configuration.port);
     logger('Listing on port %s', Configuration.port);
 }
