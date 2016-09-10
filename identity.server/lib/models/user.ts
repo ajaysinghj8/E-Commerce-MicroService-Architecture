@@ -1,10 +1,11 @@
 import { model, Schema, SchemaType } from 'mongoose';
-
+import * as bcrypt from 'bcrypt';
 
 const UserSchemaObject: any = {
     encrypted_password: { type: String, limit: 128 },
     password_salt: { type: String, limit: 128 },
-    email: String,
+    email: { type: String, unique: true },
+    username: { type: String, unique: true },
     remember_token: String,
     persistence_token: String,
     reset_password_token: String,
@@ -30,3 +31,23 @@ const UserSchema = new Schema(UserSchemaObject);
 
 export const PlzooUser = model('Plzoo_Users', UserSchema);
 
+
+UserSchema.statics.encryptPassword = (password) => {
+    return new Promise((resolve, reject) => {
+        bcrypt.genSalt(10, (err, salt) => {
+            if (err) return reject(err);
+            bcrypt.hash(password, salt, (err, hash) => {
+                resolve(hash);
+            });
+        });
+    });
+};
+
+UserSchema.statics.validatePassword = (password, hash) => {
+    return new Promise((resolve, reject) => {
+        bcrypt.compare(password, hash, function (err, res) {
+            if (err) return reject(err);
+            resolve(res);
+        });
+    });
+};
