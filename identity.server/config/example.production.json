@@ -1,0 +1,7 @@
+{
+    "cluster": true,
+    "port":8900,
+    "mongo": {
+        "uri": "<MongoDB Url Path>"
+    }
+}
