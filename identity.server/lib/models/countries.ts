@@ -10,5 +10,5 @@ const CountriesSchemaObject: any = {
     numcode: Number
 };
 
-
-export const PlzooCountires = model('Plzoo_Countries', CountriesSchemaObject);
+const CountriesSchema =  new Schema(CountriesSchemaObject);
+export const PlzooCountires = model('Plzoo_Countries', CountriesSchema);
