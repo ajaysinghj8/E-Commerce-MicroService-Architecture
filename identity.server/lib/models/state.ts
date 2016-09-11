@@ -1,10 +1,13 @@
 
+
 import { model, Schema, SchemaType } from 'mongoose';
 
-const StateSchemaObject = {
-    name: String,
+
+const StateSchemaObject: any = {
     abbr: String,
+    name: String,
     country: { type: Schema.Types.ObjectId, ref: 'Plzoo_Countries' }
 };
 
-export const StateSchema = new Schema('Plzoo_States',StateSchemaObject);
+const StatesSchema = new Schema(StateSchemaObject);
+export const PlzooStates = model('Plzoo_States', StatesSchema);
