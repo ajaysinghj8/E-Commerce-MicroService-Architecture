@@ -9,6 +9,7 @@ import { Context } from 'koa';
 import * as Debug from 'debug';
 import * as Router from 'koa-router';
 
+import { RoutesApiV1Auth } from './auth';
 
 const logger = Debug('identity:routing:v1');
 
@@ -30,3 +31,7 @@ export const RoutesApiV1 = new Router();
 
 RoutesApiV1.get('/api', RouteApiHome);
 RoutesApiV1.get('/api/v1', RouteApiV1Home);
+RoutesApiV1.use('/api/v1/auth', RoutesApiV1Auth.routes());
+RoutesApiV1.use('/api/v1/auth', RoutesApiV1Auth.allowedMethods());
+
+

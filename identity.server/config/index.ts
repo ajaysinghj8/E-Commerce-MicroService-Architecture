@@ -1,4 +1,11 @@
-'use strict';
+/* @license
+ * Copyright pLzOO Inc. All Rights Reserved.
+ * Project: identity.server
+ * File: config/index.ts
+ * Author: Ajay Singh <meajaysingh@hotmail.com> 
+ */
+
+
 /*global process*/
 import { join } from 'path';
 import { readFileSync } from 'fs';

@@ -11,7 +11,7 @@ const AddressSchemaObject: any = {
     zipcode: String,
     phone: String,
     alternative_phone: String,
-    country: {type:Number, ref: 'Plzoo_Countries'},
+    country: { type: Schema.Types.ObjectId, ref: 'Plzoo_Countries' },
     state: {}
 };
 
